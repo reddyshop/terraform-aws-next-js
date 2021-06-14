@@ -109,7 +109,7 @@ variable "cloudfront_origins" {
 
 variable "cloudfront_custom_behaviors" {
   type    = list(any)
-  default = null
+  default = []
 }
 
 variable "cloudfront_origin_headers" {

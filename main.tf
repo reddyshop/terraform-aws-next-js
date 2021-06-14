@@ -199,10 +199,10 @@ locals {
     cache_policy_id          = module.next_image[0].cloudfront_cache_policy_id
   }] : []
 
-  cloudfront_custom_behaviors = var.cloudfront_custom_behaviors != null ? concat(
+  cloudfront_custom_behaviors = concat(
     local.next_image_custom_behavior,
     var.cloudfront_custom_behaviors
-  ) : local.next_image_custom_behavior
+  )
 }
 
 resource "random_id" "policy_name" {

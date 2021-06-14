@@ -201,7 +201,7 @@ You can create a `.terraformignore` in the root of your project and add the foll
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | cloudfront\_cache\_key\_headers | Header keys that should be used to calculate the cache key in CloudFront. | `list(string)` | <pre>[<br>  "Authorization"<br>]</pre> | no |
-| cloudfront\_custom\_behaviors | n/a | `list(any)` | `null` | no |
+| cloudfront\_custom\_behaviors | n/a | `list(any)` | `[]` | no |
 | cloudfront\_geo\_restriction | Options to control distribution of content, object with restriction\_type and locations. | <pre>object({<br>    restriction_type = string,<br>    locations        = list(string),<br>  })</pre> | <pre>{<br>  "locations": [],<br>  "restriction_type": "none"<br>}</pre> | no |
 | cloudfront\_minimum\_protocol\_version | Minimum version of the SSL protocol that you want CloudFront to use for HTTPS connections. One of SSLv3, TLSv1, TLSv1\_2016, TLSv1.1\_2016, TLSv1.2\_2018 or TLSv1.2\_2019. | `string` | `"TLSv1.2_2019"` | no |
 | cloudfront\_origin\_headers | Header keys that should be sent to the S3 or Lambda origins. Should not contain any header that is defined via cloudfront\_cache\_key\_headers. | `list(string)` | `[]` | no |
